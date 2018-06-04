@@ -2,7 +2,12 @@
 <html class="no-js">
     
     <head>
-        <title>Admin Home Page</title>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- Favicon -->
+        <link rel="icon" href="<?php echo base_url('assets/images/dishub.png');?>" type="image/x-icon" />
+        <title>Izin Trayek Kabupaten Bulukumba</title>
         <!-- Bootstrap -->
         <link href="<?php echo base_url()?>assets/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
         <link href="<?php echo base_url()?>assets/bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet" media="screen">
@@ -13,7 +18,7 @@
             <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
         <![endif]-->
         <script src="<?php echo base_url()?>assets/vendors/modernizr-2.6.2-respond-1.1.0.min.js"></script>
-        <link rel="stylesheet" type="text/css" href="<?= base_url('assets/sweet/dist/sweetalert.css') ?>">
+        <!-- <link rel="stylesheet" href="<?php echo base_url()?>assets/sweet/dist/sweetalert.css"> -->
         <script type="text/javascript" src="<?= base_url('assets/sweet/dist/sweetalert.min.js') ?>"></script>
     </head>
     
@@ -42,7 +47,7 @@
                         </ul>
                         <ul class="nav">
                             <li class="active">
-                                <a id="judul" href="<?php echo base_url('run')?>">Pengelolaan Ijin Trayek Kabupaten Bulukumba</a>
+                                <a id="judul" href="<?php echo base_url('run')?>">Pengelolaan Izin Trayek Kabupaten Bulukumba</a>
                             </li>                          
                         </ul>
                     </div>
@@ -56,16 +61,19 @@
                     <ul class="nav nav-list bs-docs-sidenav nav-collapse collapse">
                         <li></li>
                         <li style="border-radius: 0px">
-                            <a style="min-height: 90px"><img style="height: 90px;width: 80px;" src="<?= base_url('assets/images/bulkum.png')?>"> <img id="dishub" style="height: 90px;width: 90px;" src="<?= base_url('assets/images/dishub.png')?>"></a>
+                            <a style="min-height: 90px"><img id="dishub" style="height: 90px;width: 90px;" src="<?= base_url('assets/images/dishub.png')?>"></a>
                         </li>
-                        <li class="<?php if($this->uri->segment(2)=="info"){echo "active";}?>dropdown">
+                        <li class="<?php if($this->uri->segment(1)=="kendaraan"){echo "active";}?> dropdown">
                            <a href="javascript:;" data-toggle="dropdown" class="dropdown-toggle"> <i class="icon-chevron-right"></i>Master Kendaraan</a>
                            <ul class="dropdown-menu" id="menu1">
-                                <li class="<?php if($this->uri->segment(2)=="kabupaten"){echo "active";}?>">  <!-- Membandingkan segmen kedua dr url jika sama maka dikerja -->
+                                <li class="<?php if($this->uri->segment(1)=="kendaraan"){echo "active";}?>">  
                                     <a id="kendaraan"><i class="icon-chevron-right"></i>Kendaraan</a>
                                 </li>
-                                <li class="<?php if($this->uri->segment(2)=="kabupaten"){echo "active";}?>">  <!-- Membandingkan segmen kedua dr url jika sama maka dikerja -->
+                                <li class="<?php if($this->uri->segment(1)=="rute"){echo "active";}?>"> 
                                     <a id="rute"><i class="icon-chevron-right"></i>Rute</a>
+                                </li>
+                                 <li class="<?php if($this->uri->segment(1)=="jkendaraan"){echo "active";}?>"> 
+                                    <a id="jkendaraan"><i class="icon-chevron-right"></i>Jenis Kendaraan</a>
                                 </li>
                            </ul>
                         </li>
@@ -115,7 +123,7 @@
                                 </li>
                             </ul>
                         </li>
-                        <li class="<?php if($this->uri->segment(2)=="user"){echo "active";}?>">
+                        <li class="<?php if($this->uri->segment(1)=="akunt"){echo "active";}?>">
                             <a id="user"><i class="icon-chevron-right"></i>User</a>
                         </li>
                         <li>

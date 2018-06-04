@@ -7,52 +7,65 @@
   <meta name="description" content="Creative - Zem-Indigo">
   <meta name="author" content="GeeksLabs">
   <meta name="keyword" content="Zem-Indigo">
-  <link rel="shortcut icon" href="img/favicon.png">
+  <link rel="shortcut icon" href="<?= base_url()?>assets/images/dishub.png">
 
   <title>Login Page Admin | Creative - Zem-Indigo</title>
 
   <!-- Bootstrap CSS -->
-  <link href="<?php echo base_url();?>assets/admin/css/bootstrap.min.css" rel="stylesheet">
+  <link href="<?php echo base_url();?>assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <!-- bootstrap theme -->
-  <link href="<?php echo base_url();?>assets/admin/css/bootstrap-theme.css" rel="stylesheet">
-  <!--external css-->
-  <!-- font icon -->
-  <link href="<?php echo base_url();?>assets/admin/css/elegant-icons-style.css" rel="stylesheet" />
-  <link href="<?php echo base_url();?>assets/admin/css/font-awesome.css" rel="stylesheet" />
-  <!-- Custom styles -->
-  <link href="<?php echo base_url();?>assets/admin/css/style.css" rel="stylesheet">
-  <link href="<?php echo base_url();?>assets/admin/css/style-responsive.css" rel="stylesheet" />
+  <!-- <link href="<?php echo base_url();?>assets/assets/style.css" rel="stylesheet"> -->
+  <link href="<?php echo base_url();?>assets/bootstrap/css/bootstrap-responsive.css" rel="stylesheet" />
 
     <!-- =======================================================
       Author: Zem-Indigo
       Author URL: Comming Soon
     ======================================================= -->
+    <style type="text/css">
+      .login{
+        background-color: #dadcda;
+        border-radius: 6px;
+        border: 1px solid #dadcda;
+        /*padding: 6px;*/
+        width: 40%;
+        padding-bottom: 20px;
+      }
+      form{
+        margin: 20px;
+      }
+      body{
+        margin: 10% 0% 10% 30%;
+      }
+      .intext{
+        width: 96%;
+      }
+      .inlogo{
+        width: 100%;
+      }
+    </style>
 </head>
 
 <body class="login-img3-body">
 
-  <div class="container">
-
+  <div class="login">
+    
     <form class="login-form" action="<?php echo base_url('masuk/aksi_login');?>" method="post">
+      <img class="inlogo" src="assets/images/izin2.png">
       <div class="login-wrap">
         <p class="login-img"><i class="icon_lock_alt"></i></p>
         <div class="input-group">
           <span class="input-group-addon"><i class="icon_profile"></i></span>
-          <input type="text" class="form-control" name="username" placeholder="Username" autofocus>
+          <input type="text" class="form-control intext" name="username" placeholder="Username" autofocus>
         </div>
         <div class="input-group">
           <span class="input-group-addon"><i class="icon_key_alt"></i></span>
-          <input type="password" class="form-control" name="password" placeholder="Password">
+          <input type="password" class="form-control intext" name="password" placeholder="Password">
         </div>
-        <label class="checkbox">
-                <input type="checkbox" value="remember-me"> Remember me
-                <span class="pull-right"> <a href="#"> Forgot Password?</a></span>
-            </label>
         <button class="btn btn-primary btn-lg btn-block" type="submit">Login</button>
         <button class="btn btn-info btn-lg btn-block" type="submit">Signup</button>
       </div>
     </form>
-    <div class="text-right">
+    <div class="text-center">
       <div class="credits">
           <!--
             All the links in the footer should remain intact.
@@ -60,7 +73,7 @@
             Licensing information: https://bootstrapmade.com/license/
             Purchase the pro version form: https://bootstrapmade.com/buy/?theme=NiceAdmin
           -->
-          <a href="">DISHUB BULUKUMBA</a> by <a href="">Zem-Indigo</a>
+          <a href="">Izin Trayek</a> by <a href="">Dishub</a>
         </div>
     </div>
   </div>

@@ -11,7 +11,7 @@ class Masuk extends CI_Controller {
 	
 	public function index()
 	{
-		$this->load->view('admin/login');
+		$this->load->view('login');
 	}
 	function aksi_login(){
 		$username = $this->input->post('username');
@@ -21,7 +21,7 @@ class Masuk extends CI_Controller {
 			'password' => md5($password)
 			// 'password' => $password
 			);
-		$cek = $this->login->cek_login("tbuser",$where)->num_rows();
+		$cek = $this->login->cek_login("tbl_user",$where)->num_rows();
 		if($cek > 0){
  
 			$data_session = array(
@@ -30,7 +30,7 @@ class Masuk extends CI_Controller {
 				);
  
 			$this->session->set_userdata($data_session);
- 			echo '<script language="javascript">alert("Welcome To Admin");document.location="../utama";</script>';
+ 			echo '<script language="javascript">alert("Welcome To Admin");document.location="../";</script>';
 			// redirect(base_url("run"));
  
 		}else{
