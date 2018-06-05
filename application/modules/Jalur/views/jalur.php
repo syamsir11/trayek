@@ -152,9 +152,6 @@
               if (a.respon[0].execute) {
                 swal('Sukses',a.respon[0].message,'success');
                 $('#'+a.respon[0].key).remove();
-                makeTbl(a.respon[0].message,a.respon[0].key_delete,a.respon[0].key_edit);
-                $('#EditModal').modal('hide');
-                $('#form_edit')[0].reset();
               }
               else{
                 swal('Error',a.respon[0].message,'error');
